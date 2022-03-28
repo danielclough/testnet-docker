@@ -1,5 +1,5 @@
 #!/bin/bash
-# to debug use `bash -x test-multisig.sh`
+# to debug use `bash -x test-multisig-createmultisig.sh`
 PS4='${LINENO}: '
 
 # create 2 of 3 multisig
@@ -27,14 +27,14 @@ echo ${multisig}
 multisigAddress=`echo ${multisig} | jq -r '.address'`
 redeemScript=`echo ${multisig} | jq -r '.redeemScript'`
 
-recipient=${multisigAddress}
 
 # send to multisigAddress
 echo -e "
 Testing send to multisigAddress now.
 
-5th party sends to multisig (owned by 4th)"
+5th party sends to multisigAddress (${multisigAddress}; held by 4th)"
 
+recipient=${multisigAddress}
 amountToSend=1000
 echo -e "
 amountToSend=${amountToSend}
