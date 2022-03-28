@@ -48,6 +48,18 @@ echo "${conf}" > /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf
 echo -e "  /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf - configured \n\n"
 
+mkdir /home/$USER/blackmore-test/test_4
+mkdir /home/$USER/blackmore-test/test_4/.blackmore
+echo "${conf}" > /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf
+sudo chown root:root /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf
+echo -e "  /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf - configured \n\n"
+
+mkdir /home/$USER/blackmore-test/test_5
+mkdir /home/$USER/blackmore-test/test_5/.blackmore
+echo "${conf}" > /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf
+sudo chown root:root /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf
+echo -e "  /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf - configured \n\n"
+
 echo -e "configuration used:
 ${conf} \n"
 

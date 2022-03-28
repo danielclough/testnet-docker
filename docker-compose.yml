@@ -31,6 +31,26 @@ services:
       testing_net:
         ipv4_address: 172.28.1.3
 
+  test_4:
+    container_name: test_4
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_4/.blackmore:/.blackmore
+    networks:
+      testing_net:
+        ipv4_address: 172.28.1.4
+        
+  test_5:
+    container_name: test_5
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_5/.blackmore:/.blackmore
+    networks:
+      testing_net:
+        ipv4_address: 172.28.1.5
+
 networks:
   testing_net:
     ipam:
