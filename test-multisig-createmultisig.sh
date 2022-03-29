@@ -1,5 +1,5 @@
 #!/bin/bash
-# to debug use `bash -x test-multisig-createmultisig.sh`
+echo "to debug use bash -x ${0}"
 PS4='${LINENO}: '
 
 # create 2 of 3 multisig
@@ -27,26 +27,23 @@ echo ${multisig}
 multisigAddress=`echo ${multisig} | jq -r '.address'`
 redeemScript=`echo ${multisig} | jq -r '.redeemScript'`
 
-
 # send to multisigAddress
-echo -e "
-Testing send to multisigAddress now.
-
-5th party sends to multisigAddress (${multisigAddress}; held by 4th)"
 
 recipient=${multisigAddress}
 amountToSend=1000
+
 echo -e "
-amountToSend=${amountToSend}
-"
+Testing send to multisigAddress now.
+
+5th party sends to ${amountToSend} to ${multisigAddress} - held by Agent 4."
 
 txhash=`docker exec test_5 blackmore-cli sendtoaddress ${recipient} ${amountToSend}`
 echo -e "
 txhash=${txhash}
 "
 
-
 # spend from multisig
+
 echo -e "
 Testing spend from multisig in 120 seconds.
 "

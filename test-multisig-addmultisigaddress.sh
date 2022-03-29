@@ -1,5 +1,5 @@
 #!/bin/bash
-# to debug use `bash -x test-multisig-addmultisigaddress.sh`
+echo "to debug use bash -x ${0}"
 PS4='${LINENO}: '
 
 # create 2 of 3 multisig
@@ -82,7 +82,6 @@ unspent=${unspent}
 
 utxo_txid=`echo ${unspent} | jq -r '.[0] | .txid'`
 utxo_vout=`echo ${unspent} | jq -r '.[0] | .vout'`
-# utxo_scriptPubKey=`echo ${unspent} | jq -r '.[0] | .scriptPubKey'`
 amount=`echo ${unspent} | jq -r '.[0] | .amount'`
 
 amountToSend=100
@@ -94,6 +93,9 @@ rawtxhex=`docker exec test_5 blackmore-cli createrawtransaction '''[ { "txid": "
 echo -e "
 rawtxhex=${rawtxhex}
 "
+
+decoderawtransaction=`docker exec test_5 blackmore-cli decoderawtransaction ${rawtxhex}`
+echo ${decoderawtransaction}  | jq .
 
 echo -e "
 1 signs without exposing privkey
@@ -112,6 +114,9 @@ signedrawtx2=`docker exec test_2 blackmore-cli signrawtransaction ${signedrawtx1
 echo -e "
 signedrawtx2=${signedrawtx2}
 "
+
+decoderawtransaction=`docker exec test_5 blackmore-cli decoderawtransaction ${signedrawtx2}`
+echo ${decoderawtransaction}  | jq .
 
 echo -e "
 5 sends tx signed by 1 & 2
