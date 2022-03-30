@@ -2,9 +2,7 @@
 echo "to debug use bash -x ${0}"
 PS4='${LINENO}: '
 
-start_data=`echo "Even this very long message, with all of this extremely important information, is still less than 220 bytes" | xxd -p`
-# remove newline "0a"
-op_return_data="${start_data::-2}"
+start_data=`echo -n "Even this very long message, with all of this extremely important information, is still less than 220 bytes" | xxd -p`
 reversed=`echo "${op_return_data}" | xxd -r -p`
 echo "op_return_data=${op_return_data}"
 # check that op_return_data is less than 220 bytes
