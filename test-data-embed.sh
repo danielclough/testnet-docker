@@ -1,12 +1,20 @@
 #!/bin/bash
 echo "to debug use bash -x ${0}"
 PS4='${LINENO}: '
+set -e
 
-start_data=`echo -n "Even this very long message, with all of this extremely important information, is still less than 220 bytes" | xxd -p`
-reversed=`echo "${op_return_data}" | xxd -r -p`
-echo "op_return_data=${op_return_data}"
-# check that op_return_data is less than 220 bytes
+op_return_data=`echo -n "Even this very long message, with all of this extremely important information, is still less than 220 bytes" | xxd -p`
+original_string=`echo "${op_return_data}" | xxd -r -p`
 bytes=`echo "${op_return_data}" | wc --bytes`
+
+echo -e "
+op_return_data=${op_return_data}
+
+original_string=${original_string}
+
+bytes=${bytes}
+"
+# check that op_return_data is less than 220 bytes
 
 if (( ${bytes} < 220 ));then
     echo "
@@ -29,9 +37,7 @@ amount=`echo ${utxo_amount_1}`
 changeAddress=`docker exec test_1 blackmore-cli getrawchangeaddress`
 change=`echo "${amount} - .0001" | bc`
 
-echo "Agent 1 sends ${op_return_data} which is ${bytes} bytes, 
-the decoded string is \"${reversed}\",
-& Agent 1 gets back ${change} in change address ${changeAddress}"
+echo "Agent 1 sends gets back ${change} in change address ${changeAddress}"
 
 rawtxhex=`docker exec test_1 blackmore-cli createrawtransaction '''[ { "txid": "'${utxo_txid_1}'", "vout": '${utxo_vout_1}' } ]''' '''{ "data": "'${op_return_data}'", "'${changeAddress}'": "'${change}'" }'''`
 
