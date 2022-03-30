@@ -12,8 +12,7 @@ op_return_data=${op_return_data}
 
 original_string=${original_string}
 
-bytes=${bytes}
-"
+bytes=${bytes}"
 # check that op_return_data is less than 220 bytes
 
 if (( ${bytes} < 220 ));then
@@ -33,11 +32,11 @@ utxo_vout_1=`echo "${unspent}" | jq -r '.[0] | .vout'`
 utxo_amount_1=`echo "${unspent}" | jq -r '.[0] | .amount'`
 
 amount=`echo ${utxo_amount_1}`
-
 changeAddress=`docker exec test_1 blackmore-cli getrawchangeaddress`
 change=`echo "${amount} - .0001" | bc`
 
-echo "Agent 1 sends gets back ${change} in change address ${changeAddress}"
+echo -e "Agent 1 sends tx gets back ${change} in change address ${changeAddress}
+"
 
 rawtxhex=`docker exec test_1 blackmore-cli createrawtransaction '''[ { "txid": "'${utxo_txid_1}'", "vout": '${utxo_vout_1}' } ]''' '''{ "data": "'${op_return_data}'", "'${changeAddress}'": "'${change}'" }'''`
 
