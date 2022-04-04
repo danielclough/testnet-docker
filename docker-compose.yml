@@ -3,7 +3,7 @@ version: '3.9'
 services:
   test_1:
     container_name: test_1
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_1/.blackmore:/.blackmore
@@ -13,7 +13,7 @@ services:
 
   test_2:
     container_name: test_2
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_2/.blackmore:/.blackmore
@@ -23,7 +23,7 @@ services:
 
   test_3:
     container_name: test_3
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_3/.blackmore:/.blackmore
@@ -33,7 +33,7 @@ services:
 
   test_4:
     container_name: test_4
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_4/.blackmore:/.blackmore
@@ -43,7 +43,7 @@ services:
         
   test_5:
     container_name: test_5
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_5/.blackmore:/.blackmore

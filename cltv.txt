@@ -1,0 +1,60 @@
+
+futureBlock=6479
+newaddress=muSAigVN6QuKYuT2zukssFCNZ6nwY4AjNi
+pubkey=0262bea3780a39a58844d79d3f90f238cecb2b1e6c5efac8603681ff60b7591776
+pubkeyHash=98aa0d7e63fbddb13a13cc13c2c5786b18534a0a
+redeemScript=024f19b17576a91498aa0d7e63fbddb13a13cc13c2c5786b18534a0a88ac
+redeemScriptHash=9c1983fa5cc3fb48c28a7e73b5c491830605cef5
+scriptPubKey=a9149c1983fa5cc3fb48c28a7e73b5c491830605cef587
+p2shAddress=2N7Uby4SrUjDJNkfCBL2ghoQQvMCXuYXgGY
+
+signedrawtx=01000000bc8d476201bad4f4250c84b3d5f915e0ea1d020f8ce8c77d9b887d49dea434258e1ddab432000000001f1e024f19b17576a91498aa0d7e63fbddb13a13cc13c2c5786b18534a0a88acfeffffff02001cd5a1030000001976a914f1abbb7045c1eaa902d3ea2aaaa2002a300c191d88acf0d5caa7030000001976a9144b61c25355c67a20e50ec6fe2ae45b6d83e2e4af88ac4f190000
+
+
+decodedtx={
+  "txid": "a56e8978e548c72ede33476814a784f2abdf6aa25608c7ff813c211b1b87478d",
+  "size": 154,
+  "version": 1,
+  "time": 1648856508,
+  "locktime": 6479,
+  "vin": [
+    {
+      "txid": "32b4da1d8e2534a4de497d889b7dc7e88c0f021deae015f9d5b3840c25f4d4ba",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "024f19b17576a91498aa0d7e63fbddb13a13cc13c2c5786b18534a0a88ac",
+        "hex": "1e024f19b17576a91498aa0d7e63fbddb13a13cc13c2c5786b18534a0a88ac"
+      },
+      "sequence": 4294967294
+    }
+  ],
+  "vout": [
+    {
+      "value": 156.00000000,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 f1abbb7045c1eaa902d3ea2aaaa2002a300c191d OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914f1abbb7045c1eaa902d3ea2aaaa2002a300c191d88ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "n3YnsSqix4GNFUnQyjmbw6nEi6xNPzXAw3"
+        ]
+      }
+    },
+    {
+      "value": 156.99990000,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 4b61c25355c67a20e50ec6fe2ae45b6d83e2e4af OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a9144b61c25355c67a20e50ec6fe2ae45b6d83e2e4af88ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "mnPY5rvVJRDKvEmFEtB8Bb4pPY386Ub2Ge"
+        ]
+      }
+    }
+  ]
+}
+

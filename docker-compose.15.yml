@@ -1,0 +1,159 @@
+version: '3.9'
+
+services:
+  blk_1:
+    container_name: blk_1
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_1/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.1
+
+  blk_2:
+    container_name: blk_2
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_2/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.2
+
+  blk_3:
+    container_name: blk_3
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_3/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.3
+
+  blk_4:
+    container_name: blk_4
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_4/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.4
+        
+  blk_5:
+    container_name: blk_5
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_5/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.5
+        
+  blk_6:
+    container_name: blk_6
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_6/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.6
+
+  blk_7:
+    container_name: blk_7
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_7/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.7
+
+  blk_8:
+    container_name: blk_8
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_8/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.8
+
+  blk_9:
+    container_name: blk_9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_9/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.9
+        
+  test_10:
+    container_name: blk_10
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_10/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.10
+        
+  test_11:
+    container_name: blk_11
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_11/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.11
+
+  test_12:
+    container_name: blk_12
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_12/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.12
+
+  test_13:
+    container_name: blk_13
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_13/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.13
+
+  test_14:
+    container_name: blk_14
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_14/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.14
+        
+  test_15:
+    container_name: blk_15
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    command: 'blackmored'
+    volumes:
+      - /home/$USER/blackmore-test/test_15/.blackmore:/.blackmore
+    networks:
+      blk_net:
+        ipv4_address: 172.28.1.15
+
+networks:
+  blk_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.1.0/16
