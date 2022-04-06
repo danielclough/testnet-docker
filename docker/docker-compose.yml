@@ -3,17 +3,22 @@ version: '3.9'
 services:
   blk_1:
     container_name: blk_1
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_1/.blackmore:/.blackmore
+    # ports: 
+    #   - "25715:25715"
+    #   - "25714:25714"
     networks:
       blk_net:
         ipv4_address: 172.28.1.1
 
   blk_2:
     container_name: blk_2
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_2/.blackmore:/.blackmore
@@ -23,7 +28,8 @@ services:
 
   blk_3:
     container_name: blk_3
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_3/.blackmore:/.blackmore
@@ -33,7 +39,8 @@ services:
 
   blk_4:
     container_name: blk_4
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_4/.blackmore:/.blackmore
@@ -43,7 +50,8 @@ services:
         
   blk_5:
     container_name: blk_5
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_5/.blackmore:/.blackmore
@@ -53,7 +61,8 @@ services:
         
   blk_6:
     container_name: blk_6
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_6/.blackmore:/.blackmore
@@ -63,7 +72,8 @@ services:
 
   blk_7:
     container_name: blk_7
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_7/.blackmore:/.blackmore
@@ -73,7 +83,8 @@ services:
 
   blk_8:
     container_name: blk_8
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_8/.blackmore:/.blackmore
@@ -83,7 +94,8 @@ services:
 
   blk_9:
     container_name: blk_9
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_9/.blackmore:/.blackmore
@@ -93,7 +105,8 @@ services:
         
   test_10:
     container_name: blk_10
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_10/.blackmore:/.blackmore
@@ -103,7 +116,8 @@ services:
         
   test_11:
     container_name: blk_11
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_11/.blackmore:/.blackmore
@@ -113,7 +127,8 @@ services:
 
   test_12:
     container_name: blk_12
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_12/.blackmore:/.blackmore
@@ -123,7 +138,8 @@ services:
 
   test_13:
     container_name: blk_13
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_13/.blackmore:/.blackmore
@@ -133,7 +149,8 @@ services:
 
   test_14:
     container_name: blk_14
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_14/.blackmore:/.blackmore
@@ -143,7 +160,8 @@ services:
         
   test_15:
     container_name: blk_15
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_15/.blackmore:/.blackmore
@@ -153,7 +171,8 @@ services:
 
 networks:
   blk_net:
+    driver: bridge
     ipam:
-      driver: default
       config:
-        - subnet: 172.28.1.0/16
+        - subnet: 172.28.0.0/16
+          gateway: 172.28.0.254

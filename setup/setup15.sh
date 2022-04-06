@@ -44,90 +44,120 @@ onlynet=ipv4"
 mkdir /home/$USER/blackmore-test/
 mkdir /home/$USER/blackmore-test/test_1
 mkdir /home/$USER/blackmore-test/test_1/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_1/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_1/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_1/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_1/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_1/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_2
 mkdir /home/$USER/blackmore-test/test_2/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_2/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_2/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_3
 mkdir /home/$USER/blackmore-test/test_3/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_3/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_3/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_4
 mkdir /home/$USER/blackmore-test/test_4/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_4/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_4/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_5
 mkdir /home/$USER/blackmore-test/test_5/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_5/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_5/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_6
 mkdir /home/$USER/blackmore-test/test_6/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_6/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_6/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_6/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_6/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_6/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_7
 mkdir /home/$USER/blackmore-test/test_7/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_7/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_7/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_7/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_7/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_7/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_8
 mkdir /home/$USER/blackmore-test/test_8/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_8/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_8/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_8/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_8/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_8/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_9
 mkdir /home/$USER/blackmore-test/test_9/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_9/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_9/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_9/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_9/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_9/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_10
 mkdir /home/$USER/blackmore-test/test_10/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_10/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_10/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_10/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_10/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_10/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_11
 mkdir /home/$USER/blackmore-test/test_11/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_11/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_11/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_11/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_11/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_11/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_12
 mkdir /home/$USER/blackmore-test/test_12/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_12/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_12/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_12/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_12/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_12/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_13
 mkdir /home/$USER/blackmore-test/test_13/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_13/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_13/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_13/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_13/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_13/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_14
 mkdir /home/$USER/blackmore-test/test_14/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_14/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_14/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_14/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_14/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_14/.blackmore/blackmore.conf - configured"
 
 mkdir /home/$USER/blackmore-test/test_15
 mkdir /home/$USER/blackmore-test/test_15/.blackmore
+sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_15/.blackmore/testnet
+sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_15/.blackmore/testnet
 echo "${conf}" > /home/$USER/blackmore-test/test_15/.blackmore/blackmore.conf
 sudo chown root:root /home/$USER/blackmore-test/test_15/.blackmore/blackmore.conf
 echo "  /home/$USER/blackmore-test/test_15/.blackmore/blackmore.conf - configured"
