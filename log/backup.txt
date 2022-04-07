@@ -1,5 +1,1 @@
-backup 04/06/22 - 1649210534
-backup wallets 04/06/22 - %s 1649210645
-1649210827: backup wallet wallet1.dat - 04/06/22
-04/06/22:1649210874: backup wallet wallet1.dat
 04/06/22:1649210973: backup wallet1.dat
