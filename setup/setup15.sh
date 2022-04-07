@@ -1,23 +1,8 @@
 #!/bin/bash
-
 echo -e "
     *******************************************************************************************************
      sudo will be requried - you should examine the script to ensure I'm not putting something bad in here
     *******************************************************************************************************"
-
-composeInstalled=`docker-compose -v`
-if [ -n "$var" ]; then
-    echo "docker-compose not installed - installing now"
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
-    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-    sudo curl \
-        -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose \
-        -o /etc/bash_completion.d/docker-compose
-else
-    echo -e "docker-compose installed - moving on \n"
-fi
-
 
 conf="testnet=1
 server=1
@@ -41,126 +26,28 @@ logips=1
 synctime=0
 onlynet=ipv4"
 
+sudo rm -fr /home/$USER/blackmore-test/
 mkdir /home/$USER/blackmore-test/
-mkdir /home/$USER/blackmore-test/test_1
-mkdir /home/$USER/blackmore-test/test_1/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_1/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_1/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_1/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_1/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_1/.blackmore/blackmore.conf - configured"
 
-mkdir /home/$USER/blackmore-test/test_2
-mkdir /home/$USER/blackmore-test/test_2/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_2/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_2/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_2/.blackmore/blackmore.conf - configured"
+for i in {1..15};do
+    mkdir /home/$USER/blackmore-test/test_${i}
+    mkdir /home/$USER/blackmore-test/test_${i}/.blackmore
+    sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_${i}/.blackmore/testnet
+    sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_${i}/.blackmore/testnet
+    echo "${conf}" > /home/$USER/blackmore-test/test_${i}/.blackmore/blackmore.conf
+    sudo chown root:root /home/$USER/blackmore-test/test_${i}/.blackmore/blackmore.conf
+    echo "  /home/$USER/blackmore-test/test_${i}/.blackmore/blackmore.conf - configured"
+done
 
-mkdir /home/$USER/blackmore-test/test_3
-mkdir /home/$USER/blackmore-test/test_3/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_3/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_3/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_3/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_4
-mkdir /home/$USER/blackmore-test/test_4/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_4/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_4/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_4/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_5
-mkdir /home/$USER/blackmore-test/test_5/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_5/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_5/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_5/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_6
-mkdir /home/$USER/blackmore-test/test_6/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_6/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_6/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_6/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_6/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_6/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_7
-mkdir /home/$USER/blackmore-test/test_7/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_7/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_7/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_7/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_7/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_7/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_8
-mkdir /home/$USER/blackmore-test/test_8/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_8/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_8/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_8/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_8/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_8/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_9
-mkdir /home/$USER/blackmore-test/test_9/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_9/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_9/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_9/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_9/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_9/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_10
-mkdir /home/$USER/blackmore-test/test_10/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_10/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_10/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_10/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_10/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_10/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_11
-mkdir /home/$USER/blackmore-test/test_11/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_11/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_11/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_11/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_11/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_11/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_12
-mkdir /home/$USER/blackmore-test/test_12/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_12/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_12/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_12/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_12/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_12/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_13
-mkdir /home/$USER/blackmore-test/test_13/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_13/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_13/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_13/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_13/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_13/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_14
-mkdir /home/$USER/blackmore-test/test_14/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_14/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_14/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_14/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_14/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_14/.blackmore/blackmore.conf - configured"
-
-mkdir /home/$USER/blackmore-test/test_15
-mkdir /home/$USER/blackmore-test/test_15/.blackmore
-sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_15/.blackmore/testnet
-sudo cp -r /home/$USER/.blackmore/testnet/blocks /home/$USER/blackmore-test/test_15/.blackmore/testnet
-echo "${conf}" > /home/$USER/blackmore-test/test_15/.blackmore/blackmore.conf
-sudo chown root:root /home/$USER/blackmore-test/test_15/.blackmore/blackmore.conf
-echo "  /home/$USER/blackmore-test/test_15/.blackmore/blackmore.conf - configured"
+# RESET IF wallet1.dat in backup/
+dir=`cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd`
+timestamp=`date +%s`
+date=`date +%D`
+filename="wallet1.dat"
+message="${date}:${timestamp}: reset ${filename} - removed all other wallet.dat files"
+cd ${dir}
+sudo cp ../backup/wallet1.dat /home/$USER/blackmore-test/test_1/.blackmore/testnet/wallet.dat && \
+echo "${message}" >> ../log/backup.txt
 
 echo -e "configuration used:
 ${conf} \n"
@@ -168,4 +55,5 @@ ${conf} \n"
 echo "To run commands open another terminal and use:"
 echo -e "docker exec test_# blackmore-cli getinfo \n"
 
+cd ../docker
 docker-compose up

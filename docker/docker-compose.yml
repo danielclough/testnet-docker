@@ -8,9 +8,9 @@ services:
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_1/.blackmore:/.blackmore
-    # ports: 
-    #   - "25715:25715"
-    #   - "25714:25714"
+    ports: 
+      - "25715:25715"
+      - "25714:25714"
     networks:
       blk_net:
         ipv4_address: 172.28.1.1

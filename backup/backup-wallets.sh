@@ -3,7 +3,7 @@
 dir=`cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd`
 timestamp=`date +%s`
 date=`date +%D`
-filename="wallet1-${timestamp}.dat"
+filename="wallet1.dat"
 message="${date}:${timestamp}: backup ${filename}"
 
 sudo cd ${dir}  && \
