@@ -1,1 +1,2 @@
 04/06/22:1649210973: backup wallet1.dat
+04/07/22:1649364386: reset wallet1.dat - removed all other wallet.dat files
