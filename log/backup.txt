@@ -1,2 +1,10 @@
 04/06/22:1649210973: backup wallet1.dat
 04/07/22:1649364386: reset wallet1.dat - removed all other wallet.dat files
+04/09/22:1649537358: reset wallet1.dat - removed all other wallet.dat files
+04/09/22:1649537659: reset wallet1.dat - removed all other wallet.dat files
+04/10/22:1649567762: reset wallet1.dat - removed all other wallet.dat files
+04/12/22:1649737297: reset wallet1.dat - removed all other wallet.dat files
+04/12/22:1649788139: reset wallet1.dat - removed all other wallet.dat files
+04/12/22:1649788516: reset wallet1.dat - removed all other wallet.dat files
+04/13/22:1649801898: reset wallet1.dat - removed all other wallet.dat files
+04/13/22:1649829986: reset wallet1.dat - removed all other wallet.dat files

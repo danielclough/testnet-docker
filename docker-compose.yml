@@ -8,17 +8,17 @@ services:
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_1/.blackmore:/.blackmore
-    ports: 
-      - "25715:25715"
-      - "25714:25714"
+    # ports: 
+    #   - "25715:25715"
+    #   - "25714:25714"
     networks:
       blk_net:
         ipv4_address: 172.28.1.1
 
   blk_2:
     container_name: blk_2
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_2/.blackmore:/.blackmore
@@ -28,8 +28,8 @@ services:
 
   blk_3:
     container_name: blk_3
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_3/.blackmore:/.blackmore
@@ -39,8 +39,8 @@ services:
 
   blk_4:
     container_name: blk_4
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_4/.blackmore:/.blackmore
@@ -50,8 +50,8 @@ services:
         
   blk_5:
     container_name: blk_5
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_5/.blackmore:/.blackmore
@@ -61,8 +61,8 @@ services:
         
   blk_6:
     container_name: blk_6
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_6/.blackmore:/.blackmore
@@ -72,8 +72,8 @@ services:
 
   blk_7:
     container_name: blk_7
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_7/.blackmore:/.blackmore
@@ -83,8 +83,8 @@ services:
 
   blk_8:
     container_name: blk_8
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_8/.blackmore:/.blackmore
@@ -94,8 +94,8 @@ services:
 
   blk_9:
     container_name: blk_9
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_9/.blackmore:/.blackmore
@@ -105,8 +105,8 @@ services:
         
   test_10:
     container_name: blk_10
-    # image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
-    image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
+    image: blackcoinnl/blackcoin-more-minimal-x86_64:blackcoin-more-0.13-dev
+    # image: blackcoinnl/blackcoin-more-minimal-x86_64:v2.13.2.9
     command: 'blackmored'
     volumes:
       - /home/$USER/blackmore-test/test_10/.blackmore:/.blackmore

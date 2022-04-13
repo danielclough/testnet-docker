@@ -1,9 +1,27 @@
 #!/bin/bash
+# exit on error
+set -e
+# sudo check
 echo -e "
-    *******************************************************************************************************
-     sudo will be requried - you should examine the script to ensure I'm not putting something bad in here
-    *******************************************************************************************************"
+    ***************************************************************************************
+     sudo is requried - examine the script to ensure I'm not putting something bad in here
+    ***************************************************************************************"
+sudo echo "sudo enabled"
 
+nodesTotal=15
+
+# Change to root directory
+dir=`dirname ${0}`
+cd ${dir}
+cd ..
+# RESET IF docker-compose already running
+docker-compose down
+
+# RESET IF blackmore-test already exists
+sudo rm -fr /home/$USER/blackmore-test/
+mkdir /home/$USER/blackmore-test/
+
+# Configure testnet nodes
 conf="testnet=1
 server=1
 listen=1
@@ -26,10 +44,7 @@ logips=1
 synctime=0
 onlynet=ipv4"
 
-sudo rm -fr /home/$USER/blackmore-test/
-mkdir /home/$USER/blackmore-test/
-
-for i in {1..15};do
+for ((i=1;i<=${nodesTotal};i++));do
     mkdir /home/$USER/blackmore-test/test_${i}
     mkdir /home/$USER/blackmore-test/test_${i}/.blackmore
     sudo cp -r /home/$USER/.blackmore/testnet/chainstate /home/$USER/blackmore-test/test_${i}/.blackmore/testnet
@@ -39,15 +54,15 @@ for i in {1..15};do
     echo "  /home/$USER/blackmore-test/test_${i}/.blackmore/blackmore.conf - configured"
 done
 
+
 # RESET IF wallet1.dat in backup/
-dir=`cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd`
 timestamp=`date +%s`
 date=`date +%D`
 filename="wallet1.dat"
 message="${date}:${timestamp}: reset ${filename} - removed all other wallet.dat files"
-cd ${dir}
-sudo cp ../backup/wallet1.dat /home/$USER/blackmore-test/test_1/.blackmore/testnet/wallet.dat && \
-echo "${message}" >> ../log/backup.txt
+
+sudo cp backup/wallet1.dat /home/$USER/blackmore-test/test_1/.blackmore/testnet/wallet.dat && \
+echo "${message}" >> log/backup.txt
 
 echo -e "configuration used:
 ${conf} \n"
@@ -55,5 +70,4 @@ ${conf} \n"
 echo "To run commands open another terminal and use:"
 echo -e "docker exec test_# blackmore-cli getinfo \n"
 
-cd ../docker
-docker-compose up
+screen -S test-containers bash -c 'docker-compose up'
